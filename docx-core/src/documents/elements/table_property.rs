@@ -43,6 +43,10 @@ impl TableProperty {
         Default::default()
     }
 
+    pub fn get_style(&self) -> Option<&TableStyle> {
+        self.style.as_ref()
+    }
+
     pub fn without_borders() -> TableProperty {
         TableProperty {
             borders: TableBorders::with_empty(),
